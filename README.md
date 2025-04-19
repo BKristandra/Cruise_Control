@@ -1,7 +1,4 @@
-# Group_65_Cruise_Control
-
-
-## Simple Cruise Control Project
+# Simple Cruise Control Project
 
 ## Description
 This project implements a simplified cruise control system for vehicles using a [PID controller](https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/PID-Controllers.html). The goal is to regulate the car's velocity to a user-defined target value by compensating for resistances like rolling resistance and aerodynamic drag. These resistances are [modeled linearly](https://ctms.engin.umich.edu/CTMS/index.php?example=CruiseControl&section=SimulinkModeling) for simplicity, enabling efficient simulation and control design.
@@ -20,7 +17,7 @@ To work on this project, you will need a C++ development environment set up on y
 ### Clone the Repository 
 Open a terminal and clone the repository by running:
 ```
-git clone https://gitlab.lrz.de/advprog2024/group_65_cruise_control.git
+git clone https://github.com/BKristandra/Cruise_Control.git
 ```
 
 This will create a local copy of the project on your machine.
