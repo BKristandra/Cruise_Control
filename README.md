@@ -1,4 +1,4 @@
-# Simple Cruise Control Project
+# Cruise Control Project
 
 ## Description
 This project implements a simplified cruise control system for vehicles using a [PID controller](https://tttapa.github.io/Pages/Arduino/Control-Theory/Motor-Fader/PID-Controllers.html). The goal is to regulate the car's velocity to a user-defined target value by compensating for resistances like rolling resistance and aerodynamic drag. These resistances are [modeled linearly](https://ctms.engin.umich.edu/CTMS/index.php?example=CruiseControl&section=SimulinkModeling) for simplicity, enabling efficient simulation and control design.
