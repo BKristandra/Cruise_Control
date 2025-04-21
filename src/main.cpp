@@ -3,8 +3,10 @@
 #include <iostream>
 #include <vector>
 #include <matplot/matplot.h>
+#include <cstdlib>
 
 int main() {
+    setenv("GNUTERM", "qt size 1900,1080", 1);
     using namespace matplot;
     const int m = 1000; // mass [kg]
     const int b = 50; // resistance coefficient [N*sec/m]
@@ -69,7 +71,9 @@ int main() {
     sgtitle("Cruise Control");
 
     subplot(3, 1, 0);
-    stairs(time_discretized,velo_trajectory,time_discretized,velocity_target);
+    auto stairs_handles = stairs(time_discretized,velo_trajectory,time_discretized,velocity_target);
+    stairs_handles[0]->line_width(2);
+    stairs_handles[1]->line_width(2);
     title("Velocities and Target Velocities");
     xlabel("time [s]"); 
     ylabel("Velocity [m/s]");
@@ -79,14 +83,14 @@ int main() {
     l->num_rows(2);
 
     subplot(3, 1, 1);
-    stairs(time_discretized,e);
+    stairs(time_discretized,e)->line_width(2);
     title("Error over time");
     xlabel("time [s]");
     ylabel("Error [m/s]");
     grid(on);
     
     subplot(3, 1, 2);
-    stairs(time_discretized,input);
+    stairs(time_discretized,input)->line_width(2);
     title("Input over time in N");
     xlabel("time [s]");
     ylabel("Input [N]");
